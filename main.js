@@ -3,8 +3,10 @@ function showMessage(msg) {
   $('#message').html(current + '<br>' + msg);
 }
 
+showMessage('Initialized');
 
 function registerSw() {
+  showMessage('Trying to register SW...');
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/dinoloader/sw.js').then(
         function(registration) {
@@ -16,5 +18,4 @@ function registerSw() {
   }
 }
 
-showMessage('Initialized');
 registerSw();
