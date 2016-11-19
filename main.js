@@ -1,5 +1,7 @@
 function showMessage(msg) {
-  $('#message').text = msg;
+  var str = $('#message').text();
+  str += '<br>' + msg;
+  $('#message').html(str);
 }
 
 
