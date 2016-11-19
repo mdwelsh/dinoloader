@@ -12,6 +12,7 @@ function registerSw() {
         }).catch(function(err) {
           showMessage('ServiceWorker registration failed: ', err);
         });
+  }
 }
 
 showMessage('Initialized');
